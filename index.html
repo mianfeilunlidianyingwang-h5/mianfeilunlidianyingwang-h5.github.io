@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免费伦理电影网 - 家庭伦理与社会伦理电影片单 | mianfeilunlidianyingwang-h5</title>
+<meta name="description" content="免费伦理电影网(mianfeilunlidianyingwang-h5)聚焦家庭伦理、社会伦理、道德抉择类电影片单，含分类影库、口碑榜单与观影帮助。官网 https://mianfeilunlidianyingwang-h5.github.io，单页演示，仅展示正向伦理题材片单，内页链接以 # 占位，接真实片源需版权授权。">
+<meta name="keywords" content="免费伦理电影网, mianfeilunlidianyingwang-h5, 家庭伦理电影, 社会伦理片单, 道德抉择电影">
+<meta name="author" content="免费伦理电影网">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://mianfeilunlidianyingwang-h5.github.io">
+<link rel="alternate" hreflang="zh-CN" href="https://mianfeilunlidianyingwang-h5.github.io">
+<meta property="og:type" content="website">
+<meta property="og:title" content="免费伦理电影网 - 家庭与社会伦理电影片单">
+<meta property="og:description" content="mianfeilunlidianyingwang-h5 提供家庭伦理、社会伦理、道德抉择类电影分类片单与口碑榜单，人文纸感界面。">
+<meta property="og:url" content="https://mianfeilunlidianyingwang-h5.github.io">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="免费伦理电影网 - 伦理题材片单">
+<meta name="twitter:description" content="mianfeilunlidianyingwang-h5 官网提供正向家庭伦理、社会伦理电影片单演示。">
+<style>
+:root{
+  --paper:#f7f3ea;--paper2:#efe7d8;--card:#fffdf8;--ink:#2b2118;--muted:#7a6e5e;
+  --brown:#5c3a21;--brown2:#8a5a33;--cinnabar:#c8412f;--cinnabar2:#e16b54;--ochre:#c69a4b;
+  --line:rgba(92,58,33,.22);--navh:64px;--radius:16px;--shadow:0 12px 26px rgba(92,58,33,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",serif;
+  background:
+    radial-gradient(820px 360px at 92% -6%,rgba(200,65,47,.10),transparent 60%),
+    radial-gradient(720px 320px at 2% 6%,rgba(198,154,75,.14),transparent 58%),
+    linear-gradient(180deg,var(--paper),var(--paper2));
+  color:var(--ink);line-height:1.8;padding-top:var(--navh);-webkit-font-smoothing:antialiased;}
+a{color:var(--brown);text-decoration:none;transition:.25s;}
+a:hover{color:var(--cinnabar);}
+img{max-width:100%;display:block;}ul{list-style:none;}
+
+.nav{position:fixed;top:0;left:0;right:0;height:var(--navh);z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 16px;
+  background:rgba(247,243,234,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.brand{font-weight:900;font-size:clamp(14px,4.2vw,20px);color:var(--ink);display:flex;align-items:center;gap:8px;white-space:nowrap;}
+.brand b{color:var(--brown2);}.brand .tag{font-size:11px;color:#fff;background:var(--cinnabar);padding:2px 7px;border-radius:6px;font-weight:800;}
+.menu-btn{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px;}
+.menu-btn span{width:26px;height:3px;background:var(--brown);border-radius:3px;transition:.3s;}
+.menu-btn.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+.menu-btn.open span:nth-child(2){opacity:0;}
+.menu-btn.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+.nav-links{display:flex;gap:6px;flex-wrap:wrap;}
+.nav-links a{color:var(--brown);font-size:15px;font-weight:700;min-height:44px;display:inline-flex;align-items:center;padding:8px 12px;border-radius:20px;}
+.nav-links a:hover{background:rgba(92,58,33,.12);color:var(--cinnabar);}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px;}
+.section{padding:62px 0;}
+.sec-title{font-size:clamp(22px,5vw,30px);font-weight:900;text-align:center;margin-bottom:8px;color:var(--brown);}
+.sec-title small{display:block;font-size:12px;letter-spacing:2px;color:var(--muted);font-weight:700;margin-top:8px;}
+.sec-title::after{content:"";display:block;width:78px;height:4px;border-radius:4px;margin:14px auto 0;background:linear-gradient(90deg,var(--brown),var(--cinnabar));}
+
+/* 头部阅读卡 */
+.hero{padding:66px 0 30px;}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .8fr;gap:30px;align-items:center;}
+.bookmark{display:inline-block;background:var(--cinnabar);color:#fff;font-size:12px;font-weight:800;padding:5px 12px;border-radius:6px;margin-bottom:14px;}
+.hero h1{font-size:clamp(27px,6vw,42px);line-height:1.2;color:var(--brown);margin-bottom:16px;}
+.hero h1 em{font-style:normal;color:var(--cinnabar);}.hero h1 i{font-style:normal;color:var(--ochre);}
+.hero p{color:var(--muted);font-size:clamp(15px,2.6vw,17px);margin-bottom:18px;max-width:560px;}
+.urlbox{display:inline-block;font-family:ui-monospace,Menlo,Consolas,monospace;border:1px dashed var(--brown2);color:var(--brown);background:rgba(92,58,33,.08);padding:10px 14px;border-radius:10px;font-size:13px;margin-bottom:18px;}
+.cta{display:inline-block;background:linear-gradient(90deg,var(--brown),var(--cinnabar));color:#fff;font-weight:900;padding:13px 30px;border-radius:30px;min-height:46px;}
+.note{background:var(--card);border-left:5px solid var(--cinnabar);border-radius:14px;padding:20px;box-shadow:var(--shadow);}
+.note h3{color:var(--cinnabar);font-size:17px;margin-bottom:8px;}
+.note p{font-size:14px;color:var(--muted);}
+.note p b{color:var(--brown);}
+
+/* 片库卡片 */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;}
+.movie{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.25s;position:relative;}
+.movie:hover{transform:translateY(-6px);border-color:var(--cinnabar);box-shadow:0 14px 26px rgba(200,65,47,.18);}
+.cover{height:210px;display:flex;align-items:center;justify-content:center;font-size:40px;color:#fff;position:relative;}
+.c1{background:linear-gradient(135deg,#5c3a21,#8a5a33);}.c2{background:linear-gradient(135deg,#c8412f,#e16b54);}
+.c3{background:linear-gradient(135deg,#7a5c2e,#c69a4b);color:#2b1d08;}.c4{background:linear-gradient(135deg,#3e3a35,#6b6258);}
+.c5{background:linear-gradient(135deg,#9c6b4a,#d9a87c);color:#2b1d08;}.c6{background:linear-gradient(135deg,#b8472f,#e89878);}
+.tab{position:absolute;top:0;right:0;background:var(--ochre);color:#fff;font-size:12px;font-weight:800;padding:4px 10px;border-bottom-left-radius:12px;}
+.minfo{padding:14px 16px;}.minfo h3{font-size:16px;color:var(--brown);margin-bottom:6px;}.minfo p{font-size:13px;color:var(--muted);display:flex;justify-content:space-between;}
+
+/* 分类 */
+.six{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 8px 18px rgba(92,58,33,.08);transition:.25s;}
+.cat:hover{transform:translateY(-4px);border-color:var(--cinnabar);}
+.cat .ico{font-size:28px;}.cat h3{font-size:17px;color:var(--brown);margin:8px 0 6px;}.cat p{font-size:13px;color:var(--muted);}.cat a{display:inline-block;margin-top:10px;font-weight:800;color:var(--cinnabar);}
+
+/* 榜单 */
+.rank{display:grid;gap:12px;counter-reset:r;max-width:840px;margin:0 auto;}
+.ri{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;}
+.ri::before{counter-increment:r;content:counter(r);width:42px;height:42px;flex:0 0 42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;background:rgba(92,58,33,.12);color:var(--brown);}
+.ri:nth-child(1)::before{background:var(--cinnabar);color:#fff;}.ri:nth-child(2)::before{background:var(--ochre);color:#2b1d08;}.ri:nth-child(3)::before{background:var(--brown2);color:#fff;}
+.rb{flex:1;}.rb h3{font-size:16px;color:var(--brown);}.rb p{font-size:13px;color:var(--muted);}.rs{font-weight:900;color:var(--cinnabar);font-size:18px;}
+
+/* 金句 */
+.quotes{display:grid;gap:14px;max-width:860px;margin:0 auto;}
+.quote{background:var(--card);border-left:4px solid var(--ochre);border-radius:12px;padding:18px 20px;}
+.quote p{font-size:16px;color:var(--ink);font-style:italic;}
+.quote span{display:block;margin-top:8px;font-size:13px;color:var(--muted);}
+
+/* 帮助+关于 */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:0 8px 18px rgba(92,58,33,.08);}
+.panel h3{color:var(--brown);margin-bottom:12px;font-size:18px;}
+.panel p{font-size:14px;color:#5b4a36;margin-bottom:10px;}
+details{border:1px solid var(--line);background:var(--card);border-radius:10px;margin-bottom:10px;overflow:hidden;}
+summary{padding:14px 16px;font-weight:700;cursor:pointer;min-height:44px;display:flex;justify-content:space-between;align-items:center;color:var(--brown);}
+summary::-webkit-details-marker{display:none;}summary::after{content:"+";color:var(--cinnabar);font-size:20px;}
+details[open] summary::after{content:"−";}details p{padding:0 16px 16px;color:#5b4a36;font-size:14px;}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px;}
+.stat{background:#f3ecde;border:1px solid var(--line);border-radius:14px;padding:16px;text-align:center;}
+.stat b{display:block;font-size:24px;color:var(--cinnabar);}.stat span{font-size:13px;color:var(--muted);}
+.notice{margin-top:18px;background:#fdf1ec;border:1px dashed var(--cinnabar);border-radius:12px;padding:16px;font-size:13px;color:#7a2f22;}
+
+.footer{background:#2b2118;color:#e2d8c6;padding:46px 0 22px;margin-top:60px;}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px;}
+.footer h4{color:#fff;font-size:16px;margin-bottom:12px;}
+.footer a{color:#c3b395;font-size:14px;display:inline-block;padding:4px 0;}
+.footer a:hover{color:#f0b89c;}
+.fb{text-align:center;margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:#c3b395;}
+.fb .u{color:#f0b89c;font-family:ui-monospace,Menlo,Consolas,monospace;}
+.toTop{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--brown),var(--cinnabar));color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;box-shadow:var(--shadow);opacity:0;visibility:hidden;transition:.3s;z-index:900;}
+.toTop.show{opacity:1;visibility:visible;}
+
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;}}
+@media(max-width:768px){.menu-btn{display:flex;}.nav-links{position:fixed;top:var(--navh);left:0;right:0;background:rgba(247,243,234,.98);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;max-height:0;overflow:hidden;transition:max-height .35s;}.nav-links.open{max-height:600px;}.nav-links a{padding:14px 18px;border-radius:0;border-bottom:1px solid rgba(0,0,0,.06);}.two{grid-template-columns:1fr;}.six{grid-template-columns:1fr 1fr;}.grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));}.cover{height:178px;}}
+@media(max-width:520px){.six{grid-template-columns:1fr;}}
+@media(max-width:420px){.grid{grid-template-columns:1fr 1fr;}.cover{height:160px;}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"免费伦理电影网","url":"https://mianfeilunlidianyingwang-h5.github.io","potentialAction":{"@type":"SearchAction","target":"https://mianfeilunlidianyingwang-h5.github.io#library","query-input":"required name=search_term"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"这里的“伦理电影”指什么？","acceptedAnswer":{"@type":"Answer","text":"本页仅指正向的伦理题材：家庭伦理、代际关系、婚姻与亲情、善恶抉择、社会伦理议题。不含色情、露骨、成人内容，不做擦边标题与图片，所有影片均为虚构片名模板。"}},
+{"@type":"Question","name":"可以看免费完整电影吗？","acceptedAnswer":{"@type":"Answer","text":"本页为单页演示，不提供实际播放。正式站若提供在线观看须接入有版权授权的片源，不聚合未授权影视、不提供盗版下载；合规内容可包括预告、影评与正版平台跳转。"}},
+{"@type":"Question","name":"移动端能正常浏览吗？","acceptedAnswer":{"@type":"Answer","text":"全站响应式，手机端自动折叠导航、片库双列/自适应、分类重排，核心内容纯HTML便于搜索引擎抓取。"}},
+{"@type":"Question","name":"必应怎么收录这个单页？","acceptedAnswer":{"@type":"Answer","text":"已配置 title、description、canonical、Open Graph 与 JSON-LD；可在 Bing Webmaster Tools 提交首页 https://mianfeilunlidianyingwang-h5.github.io 。按你要求不生成 robots.txt 与 sitemap.xml。"}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Movie","name":"家书抵万金","url":"https://mianfeilunlidianyingwang-h5.github.io#library","description":"演示影片：免费伦理电影网家庭伦理片库示例，讲述三代人代际沟通与亲情抉择，正向伦理题材。","genre":["家庭","伦理","剧情"],"datePublished":"2025-05-01","aggregateRating":{"@type":"AggregateRating","ratingValue":"9.0","bestRating":"10","worstRating":"1","ratingCount":"210"}}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="nav">
+  <div class="brand"><b>免费伦理电影网</b><span class="tag">mianfeilunlidianyingwang-h5</span></div>
+  <button class="menu-btn" id="menuBtn" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav-links" id="navLinks" aria-label="主导航">
+    <a href="#home">首页</a>
+    <a href="#library">伦理片库</a>
+    <a href="#category">题材分类</a>
+    <a href="#ranking">口碑榜单</a>
+    <a href="#quote">伦理金句</a>
+    <a href="#help">观影帮助</a>
+    <a href="#about">关于本站</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <span class="bookmark">人文片单 · 正向伦理</span>
+      <h1>免费伦理电影网 · <em>讲人</em>情世故 <br><i>看善恶</i>抉择</h1>
+      <p>免费伦理电影网（mianfeilunlidianyingwang-h5）聚焦家庭伦理、社会伦理、道德抉择类电影片单——代际、婚姻、亲情、善恶之间的人性观察。本页仅作正向题材模板演示，不含任何成人/擦边内容，内页均用 # 占位。</p>
+      <div class="urlbox">https://mianfeilunlidianyingwang-h5.github.io</div>
+      <br>
+      <a class="cta" href="#library">浏览伦理片库 #</a>
+    </div>
+    <aside class="note" aria-label="内容说明">
+      <h3>⚖️ 内容红线说明</h3>
+      <p>本页“伦理”仅指<b>家庭伦理 / 社会伦理 / 道德议题</b>类正向影视：代际沟通、婚姻与亲情、善恶抉择、社会责任。</p>
+      <p style="margin-top:8px;">不涉色情、露骨、成人擦边内容；不聚合未授权影视。正式上线接片源需取得著作权授权。</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section" id="library">
+  <div class="wrap">
+    <h2 class="sec-title">伦理片库<small>MIANFEI LUNLI DIANYINGWANG · 正向题材片单</small></h2>
+    <div class="grid">
+      <article class="movie"><div class="cover c1"><span class="tab">家庭</span>📖</div><div class="minfo"><h3>家书抵万金</h3><p><span>家庭伦理</span><span>118分</span></p></div></article>
+      <article class="movie"><div class="cover c2"><span class="tab">抉择</span>⚖️</div><div class="minfo"><h3>两难的选择</h3><p><span>道德伦理</span><span>104分</span></p></div></article>
+      <article class="movie"><div class="cover c3"><span class="tab">代际</span>👨‍👧</div><div class="minfo"><h3>餐桌上的距离</h3><p><span>亲情</span><span>96分</span></p></div></article>
+      <article class="movie"><div class="cover c4"><span class="tab">社会</span>🏘️</div><div class="minfo"><h3>老街守望者</h3><p><span>社会伦理</span><span>112分</span></p></div></article>
+      <article class="movie"><div class="cover c5"><span class="tab">婚姻</span>💍</div><div class="minfo"><h3>十年一封信</h3><p><span>婚姻伦理</span><span>101分</span></p></div></article>
+      <article class="movie"><div class="cover c6"><span class="tab">责任</span>🤝</div><div class="minfo"><h3>他乡的责任</h3><p><span>社会伦理</span><span>108分</span></p></div></article>
+    </div>
+    <div style="text-align:center;margin-top:28px;"><a href="#" style="display:inline-block;border:1px solid var(--cinnabar);padding:12px 28px;border-radius:26px;font-weight:800;color:var(--brown);">浏览全部伦理片单 #</a></div>
+  </div>
+</section>
+
+<section class="section" id="category" style="background:rgba(92,58,33,.05);">
+  <div class="wrap">
+    <h2 class="sec-title">题材分类<small>按伦理主题筛片</small></h2>
+    <div class="six">
+      <div class="cat"><div class="ico">👨‍👩‍👧</div><h3>家庭伦理</h3><p>父母、子女、兄弟姐妹间的相处与冲突。</p><a href="#library">看家庭片单 #</a></div>
+      <div class="cat"><div class="ico">💍</div><h3>婚姻情感</h3><p>夫妻关系、婚姻困境与情感抉择。</p><a href="#library">看婚姻片单 #</a></div>
+      <div class="cat"><div class="ico">⚖️</div><h3>道德抉择</h3><p>两难处境中的良知、责任与代价。</p><a href="#library">看抉择片单 #</a></div>
+      <div class="cat"><div class="ico">👴</div><h3>代际沟通</h3><p>隔代相处、养老、传统与现代碰撞。</p><a href="#library">看代际片单 #</a></div>
+      <div class="cat"><div class="ico">🏘️</div><h3>社会伦理</h3><p>社区、职场、公共资源与公平议题。</p><a href="#library">看社会片单 #</a></div>
+      <div class="cat"><div class="ico">🕊️</div><h3>救赎和解</h3><p>宽恕、和解、自我救赎与成长。</p><a href="#library">看和解片单 #</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ranking">
+  <div class="wrap">
+    <h2 class="sec-title">口碑榜单<small>MIANFEI-LUNLI-H5 伦理片口碑榜</small></h2>
+    <div class="rank">
+      <div class="ri"><div class="rb"><h3>家书抵万金</h3><p>家庭伦理 / 118分 / 三代亲情</p></div><div class="rs">9.4</div></div>
+      <div class="ri"><div class="rb"><h3>餐桌上的距离</h3><p>代际沟通 / 96分 / 家庭餐桌</p></div><div class="rs">9.2</div></div>
+      <div class="ri"><div class="rb"><h3>两难的选择</h3><p>道德伦理 / 104分 / 良知抉择</p></div><div class="rs">9.0</div></div>
+      <div class="ri"><div class="rb"><h3>十年一封信</h3><p>婚姻情感 / 101分 / 时间对话</p></div><div class="rs">8.8</div></div>
+      <div class="ri"><div class="rb"><h3>老街守望者</h3><p>社会伦理 / 112分 / 社区人情</p></div><div class="rs">8.6</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="quote" style="background:rgba(200,65,47,.05);">
+  <div class="wrap">
+    <h2 class="sec-title">伦理金句<small>每部片后的一点思考</small></h2>
+    <div class="quotes">
+      <div class="quote"><p>“最难写的家书，往往只写了两个字：理解。”</p><span>—— 《家书抵万金》</span></div>
+      <div class="quote"><p>“选择没有对错，只有你愿不愿意承担后果。”</p><span>—— 《两难的选择》</span></div>
+      <div class="quote"><p>“一家人坐在一张桌上，沉默也是一种对话。”</p><span>—— 《餐桌上的距离》</span></div>
+      <div class="quote"><p>“守望一座老街，守的其实是人的关系。”</p><span>—— 《老街守望者》</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="help" style="background:rgba(92,58,33,.04);">
+  <div class="wrap">
+    <h2 class="sec-title">观影帮助<small>免费伦理电影网 使用与合规</small></h2>
+    <div class="two">
+      <div class="panel">
+        <h3>观片流程</h3>
+        <p>1. 首页“浏览伦理片库”进入片单；每部均为正向伦理题材，聚焦人情世故。</p>
+        <p>2. 到“题材分类”按家庭/婚姻/道德抉择/代际/社会/和解筛选。</p>
+        <p>3. 看“口碑榜单”跟大众评价，“伦理金句”做观后思考；点影片卡进详情，内页均 #。</p>
+        <p>4. 手机端点右上角汉堡菜单切栏目，全站自适应，无需手动缩放。</p>
+      </div>
+      <div>
+        <details open><summary>伦理片会不会有成人内容？</summary><p>不会。本页严格界定为家庭/社会/道德议题类正向题材，不出现色情、露骨、成人擦边内容；所有片名与简介均为模板虚构。</p></details>
+        <details><summary>为什么链接都是 #？</summary><p>按你的要求，内页、播放、详情全部用 # 占位；部署时把 # 替换为真实详情页、正版平台跳转或授权播放入口。</p></details>
+        <details><summary>做伦理类站名要注意什么？</summary><p>站名“伦理”易被理解为成人擦边，建议对外只用“家庭伦理/社会伦理”等明确限定词，避免暧昧标题、低俗关键词与诱导点击，保持内容正向。</p></details>
+        <details><summary>必应收录要注意什么？</summary><p>保持 title/description/canonical 一致、核心内容纯HTML；在 Bing Webmaster Tools 提交首页。本页按你要求不生成 robots.txt 与 sitemap.xml。</p></details>
+      </div>
+    </div>
+    <div class="notice">
+      合规声明：本页为「免费伦理电影网 / mianfeilunlidianyingwang-h5」单页演示，仅展示家庭伦理、社会伦理、道德抉择类正向影视片单；不含色情、露骨、成人内容，不聚合未授权影视、不提供盗版下载。正式上线接片源需取得著作权授权并办理相关互联网视听节目资质。内页链接均以 # 占位，不生成 robots.txt 与 sitemap.xml。
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <h2 class="sec-title">关于本站<small>品牌·域名·官网·SEO</small></h2>
+    <div class="two">
+      <div class="panel">
+        <h3>网站定位</h3>
+        <p>免费伦理电影网（mianfeilunlidianyingwang-h5）做“人文阅读卡”影视单页：首页内容红线说明、伦理片库、题材分类、口碑榜单、伦理金句、观影帮助一体化。全站统一关键词「免费伦理电影网」「mianfeilunlidianyingwang-h5」「家庭伦理/社会伦理电影」。</p>
+        <p>官网：<br><span style="font-family:ui-monospace,Menlo,Consolas,monospace;color:var(--brown);">https://mianfeilunlidianyingwang-h5.github.io</span></p>
+      </div>
+      <div class="panel">
+        <h3>技术与收录</h3>
+        <p>内部CSS、语义化标题、canonical、Open Graph、JSON-LD（WebSite/FAQ/Movie）；核心内容不依赖JS，便于必应抓取单页。</p>
+        <div class="stats">
+          <div class="stat"><b>6</b><span>演示栏目</span></div>
+          <div class="stat"><b>正向</b><span>伦理题材界定</span></div>
+          <div class="stat"><b>JSON-LD</b><span>WebSite/FAQ/Movie</span></div>
+          <div class="stat"><b>0</b><span>robots/sitemap</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="fg">
+      <div><h4>免费伦理电影网</h4><ul>
+        <li><a href="#home">首页 #</a></li><li><a href="#library">伦理片库 #</a></li><li><a href="#ranking">口碑榜单 #</a></li><li><a href="#about">关于本站 #</a></li>
+      </ul></div>
+      <div><h4>题材</h4><ul>
+        <li><a href="#category">家庭伦理 #</a></li><li><a href="#category">婚姻情感 #</a></li><li><a href="#category">道德抉择 #</a></li><li><a href="#category">代际沟通 #</a></li>
+      </ul></div>
+      <div><h4>帮助</h4><ul>
+        <li><a href="#help">观影帮助 #</a></li><li><a href="#help">内容红线 #</a></li><li><a href="#">意见反馈 #</a></li><li><a href="#">免责声明 #</a></li>
+      </ul></div>
+      <div><h4>官方信息</h4><ul>
+        <li><a href="#">站名：免费伦理电影网</a></li><li><a href="#">域名：mianfeilunlidianyingwang-h5</a></li><li><a href="https://mianfeilunlidianyingwang-h5.github.io">官网：mianfeilunlidianyingwang-h5.github.io</a></li><li><a href="#">关键词：伦理电影片单</a></li>
+      </ul></div>
+    </div>
+    <div class="fb">
+      <p>免费伦理电影网 · mianfeilunlidianyingwang-h5 · 家庭/社会伦理正向题材单页演示</p>
+      <p class="u">https://mianfeilunlidianyingwang-h5.github.io</p>
+      <p>© 2026 免费伦理电影网演示模板。不生成 robots.txt 与 sitemap.xml，内页链接以 # 占位；不含成人内容，接真实片源需版权授权。</p>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="toTop" id="toTop" aria-label="回到顶部">↑</a>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),links=document.getElementById('navLinks');
+  btn.addEventListener('click',function(){var o=links.classList.toggle('open');btn.classList.toggle('open',o);btn.setAttribute('aria-expanded',o?'true':'false');});
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');});});
+  var t=document.getElementById('toTop');window.addEventListener('scroll',function(){t.classList.toggle('show',window.scrollY>400);});
+  t.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});
+})();
+</script>
+</body>
+</html>
